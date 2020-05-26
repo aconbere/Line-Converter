@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name LineConverter)(type Legacy)(uri ${KIPRJMOD}/LineConverter.lib)(options "")(descr ""))
+)

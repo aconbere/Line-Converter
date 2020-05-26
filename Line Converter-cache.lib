@@ -1,0 +1,150 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# Connector_Generic_Conn_01x03
+#
+DEF Connector_Generic_Conn_01x03 J 0 40 Y N 1 F N
+F0 "J" 0 200 50 H V C CNN
+F1 "Connector_Generic_Conn_01x03" 0 -200 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_1x??_*
+$ENDFPLIST
+DRAW
+S -50 -95 0 -105 1 1 6 N
+S -50 5 0 -5 1 1 6 N
+S -50 105 0 95 1 1 6 N
+S -50 150 50 -150 1 1 10 f
+X Pin_1 1 -200 100 150 R 50 50 1 1 P
+X Pin_2 2 -200 0 150 R 50 50 1 1 P
+X Pin_3 3 -200 -100 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# LineConverter_GND-power
+#
+DEF LineConverter_GND-power #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -250 50 H I C CNN
+F1 "LineConverter_GND-power" 0 -150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
+X GND 1 0 0 0 D 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# LineConverter_PWR_FLAG-power
+#
+DEF LineConverter_PWR_FLAG-power #FLG 0 0 N N 1 F P
+F0 "#FLG" 0 75 50 H I C CNN
+F1 "LineConverter_PWR_FLAG-power" 0 150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 50 -40 75 0 100 40 75 0 50 N
+X pwr 1 0 0 0 U 50 50 0 0 w
+ENDDRAW
+ENDDEF
+#
+# LineConverter_R-Device
+#
+DEF LineConverter_R-Device R 0 0 N Y 1 F N
+F0 "R" 80 0 50 V V C CNN
+F1 "LineConverter_R-Device" 0 0 50 V V C CNN
+F2 "" -70 0 50 V I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ R_*
+$ENDFPLIST
+DRAW
+S -40 -100 40 100 0 1 10 N
+X ~ 1 0 150 50 D 50 50 1 1 P
+X ~ 2 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# LineConverter_SW_DPDT_x2-Switch
+#
+DEF LineConverter_SW_DPDT_x2-Switch SW 0 0 Y N 2 F N
+F0 "SW" 0 170 50 H V C CNN
+F1 "LineConverter_SW_DPDT_x2-Switch" 0 -200 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ SW*DPDT*
+$ENDFPLIST
+DRAW
+C -80 0 20 0 0 0 N
+C 80 -100 20 0 0 0 N
+C 80 100 20 0 1 0 N
+P 2 0 1 0 -60 10 65 90 N
+X A 1 200 100 100 L 50 50 1 1 P
+X B 2 -200 0 100 R 50 50 1 1 P
+X C 3 200 -100 100 L 50 50 1 1 P
+X A 4 200 100 100 L 50 50 2 1 P
+X B 5 -200 0 100 R 50 50 2 1 P
+X C 6 200 -100 100 L 50 50 2 1 P
+ENDDRAW
+ENDDEF
+#
+# LineConverter_Transformer_1P_SS_2T-WTF
+#
+DEF LineConverter_Transformer_1P_SS_2T-WTF T 0 40 Y N 1 F N
+F0 "T" 0 250 50 H V C CNN
+F1 "LineConverter_Transformer_1P_SS_2T-WTF" 0 -300 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+A -100 -150 50 899 1 0 1 0 N -100 -100 -50 -150
+A -100 -150 50 -1 -899 0 1 0 N -50 -150 -100 -199
+A -100 -50 50 899 1 0 1 0 N -100 0 -50 -50
+A -100 -50 50 -1 -899 0 1 0 N -50 -50 -100 -99
+A -100 50 50 899 1 0 1 0 N -100 100 -50 50
+A -100 50 50 -1 -899 0 1 0 N -50 50 -100 1
+A -100 150 50 899 1 0 1 0 N -100 200 -50 150
+A -100 150 50 -1 -899 0 1 0 N -50 150 -100 101
+A 100 -50 50 899 -1799 0 1 0 N 100 0 51 -50
+A 100 -50 50 1799 -899 0 1 0 N 51 -50 100 -99
+A 100 50 50 899 -1799 0 1 0 N 100 100 51 50
+A 100 50 50 1799 -899 0 1 0 N 51 50 100 1
+A 100 150 50 899 -1799 0 1 0 N 100 200 51 150
+A 100 150 50 1799 -899 0 1 0 N 51 150 100 101
+A 101 -150 50 910 -1799 0 1 0 N 101 -100 52 -150
+A 101 -150 50 -912 -1799 0 1 0 N 101 -199 52 -150
+P 2 0 1 0 -25 200 -25 -200 N
+P 2 0 1 0 25 -200 25 200 N
+X AA 1 -400 200 300 R 50 50 1 1 P
+X SD 2 -400 0 300 R 50 50 1 1 P
+X AB 3 -400 -200 300 R 50 50 1 1 P
+X SA 4 400 -200 300 L 50 50 1 1 P
+X SC 5 400 0 300 L 50 50 1 1 P
+X SB 6 400 200 300 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# SamacSys_Parts_SJ1-3523N
+#
+DEF SamacSys_Parts_SJ1-3523N J 0 30 Y Y 1 F N
+F0 "J" 1250 300 50 H V L CNN
+F1 "SamacSys_Parts_SJ1-3523N" 1250 200 50 H V L CNN
+F2 "SJ13523N" 1250 100 50 H I L CNN
+F3 "https://componentsearchengine.com/Datasheets/1/SJ1-3523N.pdf" 1250 0 50 H I L CNN
+F4 "Phone Connectors 3.5 MM AUDIO JACK" 1250 -100 50 H I L CNN "Description"
+F5 "5.5" 1250 -200 50 H I L CNN "Height"
+F6 "490-SJ1-3523N" 1250 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/CUI-Devices/SJ1-3523N?qs=WyjlAZoYn50aNl0vAhb3Tg%3D%3D" 1250 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "CUI Devices" 1250 -500 50 H I L CNN "Manufacturer_Name"
+F9 "SJ1-3523N" 1250 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+P 5 0 1 6 200 100 1200 100 1200 -400 200 -400 200 100 N
+X SLEEVE 1 0 0 200 R 50 50 0 0 O
+X NO_PIN 10 1400 -200 200 L 50 50 0 0 U
+X NO_PIN_ 11 1400 -100 200 L 50 50 0 0 U
+X TIP 2 1400 -300 200 L 50 50 0 0 O
+X RING 3 1400 0 200 L 50 50 0 0 O
+ENDDRAW
+ENDDEF
+#
+#End Library
